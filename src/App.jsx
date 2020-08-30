@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import logo from './logo.svg'
+import LogoSVG from './static/logo.svg'
 
 const Container = styled.div({
     textAlign: 'center',
@@ -38,7 +38,7 @@ const Link = styled.a({ color: '#61dafb' })
 const App = () => (
     <Container>
         <Header>
-            <Logo alt="logo" src={logo} />
+            <Logo alt="logo" src={LogoSVG} />
             <p>
                 Edit <code>src/App.js</code> and save to reload.
             </p>

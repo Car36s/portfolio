@@ -1,10 +1,4 @@
 const plugins = [
-    [
-        'babel-plugin-styled-components',
-        {
-            fileName: false,
-        },
-    ],
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-export-namespace-from',
@@ -24,11 +18,12 @@ const clientPlugins = [
 
 module.exports = (api) => {
     api.cache(true)
+    plugins.push(['babel-plugin-styled-components', { displayName: true, pure: true, ssr: true }])
 
     plugins.push(...clientPlugins)
 
     return {
-        presets: ['@babel/preset-react'],
+        presets: ['@babel/preset-env', '@babel/preset-react'],
         plugins,
     }
 }

@@ -1,4 +1,10 @@
 const plugins = [
+    [
+        'babel-plugin-styled-components',
+        {
+            fileName: false,
+        },
+    ],
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-export-namespace-from',
